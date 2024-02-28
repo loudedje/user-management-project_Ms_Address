@@ -2,8 +2,11 @@ package ms.address.user_management.controller;
 import ms.address.user_management.models.AddressModel;
 import ms.address.user_management.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/addresses")
@@ -16,10 +19,14 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @PostMapping
-    public ResponseEntity<AddressModel> createAddress(@RequestBody AddressModel address) {
-        AddressModel savedAddress = addressService.saveAddress(address);
-        return ResponseEntity.ok(savedAddress);
+    @GetMapping("/{cep}")
+    public ResponseEntity<AddressModel> getAddressByCep(@PathVariable String cep) {
+        try {
+            AddressModel address = addressService.getAddressByCep(cep);
+            return ResponseEntity.ok(address);
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
-
 }
+
