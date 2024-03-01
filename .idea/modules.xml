@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/user_management.iml" filepath="$PROJECT_DIR$/.idea/user_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/user-management-project_Ms_Address.iml" filepath="$PROJECT_DIR$/.idea/user-management-project_Ms_Address.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user_management/user_management.iml" filepath="$PROJECT_DIR$/user_management/user_management.iml" />
     </modules>
   </component>
 </project>

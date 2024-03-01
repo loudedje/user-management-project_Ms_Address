@@ -22,7 +22,7 @@ public class AddressModel implements Serializable {
 
     private String complemento;
     private String bairro;
-    private String rua;
+
     private String localidade;
 
     private String uf;
