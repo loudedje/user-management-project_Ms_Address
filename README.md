@@ -6,6 +6,7 @@ Este é o repositório para o projeto MS Address, que faz parte do desafio duran
 - Java 17
 - Maven
 - MySql
+- RabbitMQ
 
 ## Configuração
 
@@ -23,4 +24,8 @@ O aplicativo estará disponível em `http://localhost:8082` por padrão.
 
 ### Endereços.
 - `GET /v1/addresses/{cep}`: Obtém informações sobre um endereço específico.
+
+## Dependências
+- MS User: https://github.com/loudedje/user-management-project_Ms_User.git
+
 
